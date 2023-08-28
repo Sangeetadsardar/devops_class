@@ -517,7 +517,7 @@ SAVE
 
 STEP-4: MANAGE AND ASSIGN USERS
 manage roles -- > add -- > fresher & exp -- > fresher: overall read & exp: admin -- > save
-assign roles -- > add user -- > rajesh: fresher & ravi: exp -- > save
+assign roles -- > add user -- > ramesh and ganesh: fresher & suresh: exp -- > save
 
 LIST VIEW & MY VIEW:
 To seperate the jobs as per our requirment
