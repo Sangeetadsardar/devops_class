@@ -1,10 +1,10 @@
 ANSIBLE:
 Its a configuration management too1.
 
-Configuration= Software & Hardware props of server
+Configuration= Software & Hardware propperties of server
 Management= Installing, deleting, updating 
 
-Automate= serve creation, Software installation, Deployment
+Automate= server creation, Software installation, Deployment
 you can do automation in more than one server.
 
 python is dependency for ansible.
