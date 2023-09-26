@@ -400,7 +400,8 @@ Note: bucket will not delete
 
 ===============================================
 
-CRIPT:
+SCRIPT FOR AUTOMATION:
+
 RUN BELOW COMMANDS MANUALLY
 #vim .bashrc
 #export PATH=$PATH:/usr/local/bin/
