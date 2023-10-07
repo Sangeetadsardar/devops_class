@@ -687,7 +687,7 @@ it uses base64 encoded format
 Designed to prevent  exposure or unauthorized access to sensitive information within the cluster.
 Both secrets and Config maps are used outside of deployment
 config maps cannot encode but secrets will encode the data
-password=raham (now we can encode and ecode the value)
+password=raham (now we can encode and decode the value)
 
 
 K8s supports different types of secrets:
