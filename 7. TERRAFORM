@@ -392,7 +392,8 @@ resource "aws_s3_bucket" "two" {
 bucket = "${local.env}-bucketswiggy0011"
 }
 
-
+========================================================================
+VPC And Subnets:-
 
 provider "aws" {
 }
