@@ -400,15 +400,17 @@ label = way of assingning work for slave.
 SETUP:
 #STEP-1 : Create a server and install java-11
 amazon-linux-extras install java-openjdk11 -y
+yum install git java-1.8.0-openjdk maven -y
+update-alternatives --config java
 
-#STEP-2: SETUP THE SLAVE SERVER
+#STEP-2: SETUP THE SLAVE SERVER on main server
 Dashboard -- > Manage Jenkins -- > Nodes & Clouds -- > New node -- > nodename: abc -- > permanaent agent -- > save 
 
-CONFIGURATION OF SALVE:
+CONFIGURATION OF SALVE on main server
 
 Number of executors : 3 #Number of Parallel builds
 Remote root directory : /tmp #The place where our output is stored on slave sever.
-Labels : swiggy #place the op in a particular slave
+Labels : slave1 #place the op in a particular slave
 useage: last option
 Launch method : last option 
 Host: (your privte ip)
@@ -416,19 +418,19 @@ Credentials -- > add -- >jenkins -- > Kind : ssh username with privatekey -- > u
 privatekey : pemfile of server -- > save -- > 
 Host Key Verification Strategy: last option
 
+#by default job configure on built-in server
+dashboard-->job1-->congigure-->git(copy and paste from github)-->build steps-->execute shell -->mvn clean package-->save
+
+when job has to work on slave1 server
 DASHBOARD -- > JOB -- > CONFIGURE -- > RESTRTICT WHERE THIS JOB RUN -- > LABEL: SLAVE1 -- > SAVE
 
-BUILD FAILS -- > WHY -- > WE NEED TO INSTALL PACKAGES
-yum install git java-1.8.0-openjdk maven -y
-
-
-PIPLEINE CODE:
 
 
 
+PIPLEINE CODE:(create on main server)
 pipeline {
     agent {
-        label 'swiggy'
+        label 'slave1'
     }
     
     stages {
