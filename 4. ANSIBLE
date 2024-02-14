@@ -395,7 +395,7 @@ LOOPS: to do multiple operations repetetively
 
 - hosts: all
   tasks:
-    - name: create users
+    - name: delete users
       user: name={{item}} state=absent
       with_items:
         - samar
@@ -420,9 +420,9 @@ SHELL VS COMMAND VS RAW:
 
 raw >> command >> shell 
 
-
+PYTHON PACKAGES:-
 Linux: yum or apt
-python: pip
+python: pip(package manager)
 
 
 - hosts: all
